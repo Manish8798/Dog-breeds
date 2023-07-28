@@ -13,8 +13,8 @@ const App = () => {
   React.useEffect(() => {
     fetchApi();
   }, []);
-  const fetchApi = () => {
-    return fetch('https://api.thedogapi.com/v1/breeds/')
+  const fetchApi = async () => {
+    return await fetch('https://api.thedogapi.com/v1/breeds/')
       .then(res => res.json())
       .then(json => {
         setResult(json);
